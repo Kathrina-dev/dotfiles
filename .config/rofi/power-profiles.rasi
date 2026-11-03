@@ -1,0 +1,26 @@
+@import "neon-pink.rasi"
+
+window {
+    width:            240px;
+    location:         east;
+    padding:          12px;
+}
+
+mainbox {
+    children:         [ message, listview ];
+}
+
+message {
+    expand:           false;
+    margin:           0px 0px 8px 0px;
+}
+
+listview {
+    lines:            4;
+    columns:          1;
+    spacing:          6px;
+}
+
+element {
+    padding:          6px;
+}

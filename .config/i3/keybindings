@@ -1,0 +1,37 @@
+Mod + a               Launch Terminal
+Mod + w               Launch Web Browser
+Mod + c               Launch AI agent
+Mod + n               Launch File Manager
+Mod + d               Application Launcher
+Mod + t               Window Switcher
+Mod + m               Command Menu
+Mod + b               Clipboard Manager
+Mod + p               Power Profiles Menu
+Mod + z               Toggle Conky Widget
+Mod + x               Toggle Polybar
+Mod + q               Kill Focused Window
+Mod + h               Split Horizontally
+Mod + v               Split Vertically
+Mod + f               Toggle Fullscreen Mode
+Mod + s               Layout: Stacking
+Mod + g               Layout: Tabbed
+Mod + e               Layout: Split Toggle
+Mod + r               Enter Window Resize Mode
+Mod + l               Lock Screen (Blur Lock)
+Print                    Take Full Screenshot
+F1                         Open Keybinding Cheat Sheet
+Mute                   Toggle Audio Mute
+Mic Mute          Toggle Microphone Mute
+Mod + 1..0            Switch to Workspaces 1..10
+Mod + Space           Toggle Focus
+Mod + Print           Take Focused Window Screenshot
+Volume Up / Down             Adjust System Volume
+Brightness Up / Down         Adjust Screen Brightness
+Media Play / Next / Prev     Control Media Playback
+Mod + Shift + c       Reload i3 Configuration
+Mod + Shift + r       Restart i3 In-Place
+Mod + Arrow Keys      Change Window Focus
+Mod + Shift + 1..0    Move Focused Window to Workspace 1..10
+Mod + Shift + Space   Toggle Floating / Tiling
+Mod + Shift + Print   Take Region Selection Screenshot
+Mod + Shift + Arrows  Move Focused Window

@@ -1,0 +1,76 @@
+{
+  "commands": [
+    {
+      "name": "Update system",
+      "command": "~/.local/bin/update-system.sh"
+    },
+    {
+      "name": "SSH server",
+      "command": "ssh root@your_server_ip_here"
+    },
+    {
+      "name": "SSH password",
+      "command": "your_password_here"
+    },
+    {
+      "name": "Failed services",
+      "command": "systemctl --failed"
+    },
+    {
+      "name": "Remove application",
+      "command": "sudo pacman -Rns"
+    },
+    {
+      "name": "System log errors",
+      "command": "journalctl -b -p err..emerg"
+    },
+    {
+      "name": "Installed packages",
+      "command": "pacman -Qe"
+    },
+    {
+      "name": "Active listening ports",
+      "command": "ss -tulpn"
+    },
+    {
+      "name": "Search in directory",
+      "command": "grep -rni 'PATTERN' /path/to/dir"
+    },
+    {
+      "name": "Exact word match",
+      "command": "grep -rnw 'WORD' /path/to/dir"
+    },
+    {
+      "name": "Matching filenames",
+      "command": "grep -rl 'PATTERN' /path/to/dir"
+    },
+    {
+      "name": "Search word in config",
+      "command": "grep -rn 'PATTERN' ~/.config 2>/dev/null"
+    },
+    {
+      "name": "Open config files",
+      "command": "antigravity-ide ~/.config"
+    },
+    {
+      "name": "Open /.local/bin files",
+      "command": "antigravity-ide ~/.local/bin"
+    },
+    {
+      "name": "Tree list Files & Folders",
+      "command": "tree -I 'node_modules|dist|build'"
+    },
+    {
+      "name": "Todo list",
+      "command": "python ~/.config/todo/app.py"
+    },
+    {
+      "name": "Player",
+      "command": "python ~/.local/bin/player.py"
+    },
+    {
+      "name": "Packettracer",
+      "command": "/usr/lib/packettracer/packettracer.AppImage"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Rofi Keyhint Script
+LIST_FILE="$HOME/.config/i3/keybindings"
+
+if [ -f "$LIST_FILE" ]; then
+    cat "$LIST_FILE" | rofi -dmenu -i -p "KeyHints" -theme ~/.config/rofi/rofikeyhint.rasi
+else
+    rofi -e "Keybindings file not found at $LIST_FILE"
+fi

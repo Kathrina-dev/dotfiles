@@ -1,0 +1,30 @@
+[general]
+# Frame rate per second
+framerate = 60
+
+# Sensitivity tuning
+sensitivity = 100
+
+[input]
+# Method for PipeWire / PulseAudio
+method = pulse
+source = auto
+
+[output]
+# Use visual block characters
+method = ncurses
+style = stereo
+
+[color]
+# Gradient matching your neon-pink/magenta aesthetic
+gradient = 1
+gradient_count = 5
+gradient_color_1 = '#c724b1'
+gradient_color_2 = '#e05fc4'
+gradient_color_3 = '#ff2fb0'
+gradient_color_4 = '#ff6ec7'
+gradient_color_5 = '#ff8fd4'
+
+[smoothing]
+monstercat = 1
+waves = 1

@@ -1,0 +1,222 @@
+/* =========================================================
+   Arc-Dark overrides
+   Black + muted magenta
+   ========================================================= */
+
+
+/* ---------- General ---------- */
+
+window,
+.background {
+    background-color: #090909;
+    color: #d8d4d7;
+}
+
+
+/* =========================================================
+   FILE / FOLDER VIEW
+   ========================================================= */
+
+.view,
+.view text,
+.view iconview {
+    background-color: #090909;
+    color: #d8d4d7;
+}
+
+
+/* Selected file/folder */
+.view:selected {
+    background-color: rgba(196, 69, 130, 0.25);
+    color: #f0e9ed;
+}
+
+
+/* Hover */
+.view:hover {
+    background-color: rgba(196, 69, 130, 0.08);
+}
+
+
+/* =========================================================
+   RUBBERBAND
+   This is the rectangle you drag around files.
+   ========================================================= */
+
+.rubberband,
+rubberband {
+    background-color: rgba(196, 69, 130, 0.18);
+    border: 1px solid rgba(196, 69, 130, 0.85);
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+    background-color: #0c0b0c;
+    color: #c8c2c6;
+}
+
+.sidebar row:selected {
+    background-color: rgba(196, 69, 130, 0.35);
+    color: #f0e9ed;
+}
+
+
+/* =========================================================
+   CONTEXT MENU
+   ========================================================= */
+
+/*
+ * IMPORTANT:
+ * Arc-Dark draws the popup shadow through the
+ * CSD popup decoration.
+ *
+ * Remove the shadow completely and give it
+ * a simple muted-magenta border instead.
+ */
+
+.csd.popup decoration,
+.popup decoration {
+    box-shadow: none;
+    border: 1px solid #5a2942;
+    border-radius: 4px;
+}
+
+
+/* Menu itself */
+
+menu,
+.menu,
+.context-menu {
+    background-color: #151518;
+    color: #e4e0e3;
+    border: 1px solid #8f315f;
+    box-shadow: none;
+}
+
+
+/* Actual GTK menu items */
+
+menu menuitem,
+.menu menuitem,
+.context-menu menuitem {
+    background-color: transparent;
+    color: #e4e0e3;
+    box-shadow: none;
+}
+
+
+/* Hovered menu item */
+
+menu menuitem:hover,
+.menu menuitem:hover,
+.context-menu menuitem:hover {
+    background-color: #202024;
+    color: #ff1493;
+    box-shadow: none;
+}
+
+
+/*
+ * Give the hovered item a subtle border
+ * instead of a glowing shadow.
+ */
+
+menu menuitem:hover {
+    border-left: 2px solid #c44582;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+    background-color: #111011;
+    color: #d8d4d7;
+    border: 1px solid #292329;
+    box-shadow: none;
+}
+
+button:hover {
+    background-color: #1b1016;
+    color: #d45a91;
+    border-color: #c44582;
+    box-shadow: none;
+}
+
+button:active,
+button:checked {
+    background-color: #c44582;
+    color: #090909;
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   ENTRY
+   ========================================================= */
+
+entry {
+    background-color: #0b0b0b;
+    color: #d8d4d7;
+    border: 1px solid #332832;
+    caret-color: #d45a91;
+}
+
+entry:focus {
+    border-color: #c44582;
+}
+
+
+/* =========================================================
+   TEXT SELECTION
+   ========================================================= */
+
+selection {
+    background-color: rgba(196, 69, 130, 0.30);
+    color: #f0e9ed;
+}
+
+textview selection {
+    background-color: rgba(196, 69, 130, 0.30);
+    color: #f0e9ed;
+}
+
+
+/* =========================================================
+   SCROLLBARS
+   ========================================================= */
+
+scrollbar slider {
+    background-color: #5a2942;
+    border-radius: 4px;
+}
+
+scrollbar slider:hover {
+    background-color: #c44582;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+*:link {
+    color: #d45a91;
+}
+
+
+/* =========================================================
+   TOOLTIPS
+   ========================================================= */
+
+tooltip {
+    background-color: #090909;
+    color: #d45a91;
+    border: 1px solid #5a2942;
+    box-shadow: none;
+}

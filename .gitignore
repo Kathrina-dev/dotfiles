@@ -1,3 +1,4 @@
+# Archives & Binaries
 *.tar
 *.tar.*
 *.jar
@@ -9,6 +10,34 @@
 *.log
 *.log.*
 *.sig
-
 pkg/
 src/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary, swap, and editor backup files
+*.bak
+*.backup
+*.save
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Micro editor state
+.config/micro/backups/
+.config/micro/buffers/
+
+# Personal data & secrets
+.env
+*.local
+.bashrc.local
+.zshrc.local
+*.key
+*.pem
+id_rsa
+id_ed25519
+.config/todo/tasks.json

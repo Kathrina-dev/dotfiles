@@ -1,0 +1,165 @@
+* {
+    /* Backgrounds sampled from wallpaper shadows */
+    background:         #100b10;
+    background-alt:     #1a1219;
+
+    /* Text */
+    foreground:         #e6d5e0;
+    foreground-alt:     #9e8696;
+
+    /* Balanced Medium Hot Pink Accents */
+    pink:               #e0247d;
+    pink-dark:          #5e1236;
+
+    /* Neutrals */
+    black:              #080407;
+    gray:               #291c27;
+
+    /* Rofi Defaults Mapping */
+    background-color:   transparent;
+    text-color:         #e6d5e0;
+}
+
+configuration {
+    font:            "Noto Sans Regular 10";
+    show-icons:      true;
+    icon-theme:      "Papirus-Dark";
+    scroll-method:   0;
+    disable-history: false;
+    fullscreen:      false;
+    hide-scrollbar:  true;
+    sidebar-mode:    false;
+}
+
+window {
+    background-color:   #100b10;
+    border:             2px;
+    border-color:       #e0247d;
+    border-radius:      0px;
+    padding:            24px;
+    width:              65%;
+}
+
+mainbox {
+    background-color:   #100b10;
+    border:             0px;
+    padding:            0px;
+    children:           [ inputbar, listview ];
+    spacing:            12px;
+}
+
+inputbar {
+    background-color:   #1a1219;
+    border:             1px;
+    border-color:       #5e1236;
+    border-radius:      0px;
+    padding:            12px;
+    children:           [ prompt, textbox-prompt-colon, entry, case-indicator ];
+}
+
+prompt {
+    background-color:   transparent;
+    text-color:         #e0247d;
+}
+
+textbox-prompt-colon {
+    background-color:   transparent;
+    text-color:         #e0247d;
+    expand:             false;
+    str:                ":";
+    margin:             0px 0.3em 0em 0em;
+}
+
+entry {
+    background-color:   transparent;
+    text-color:         #e6d5e0;
+    placeholder:        "Search applications...";
+    placeholder-color:  #9e8696;
+}
+
+case-indicator {
+    background-color:   transparent;
+    text-color:         #9e8696;
+}
+
+listview {
+    background-color:   #100b10;
+    fixed-height:       true;
+    lines:              8;
+    columns:            3;
+    spacing:            8px;
+    padding:            8px 0px 0px;
+    scrollbar:          false;
+    cycle:              true;
+}
+
+element {
+    background-color:   #1a1219;
+    border:             1px;
+    border-color:       #291c27;
+    border-radius:      0px;
+    padding:            8px 10px;
+    orientation:        horizontal;
+    children:           [ element-icon, element-text ];
+}
+
+element normal.normal {
+    background-color:   #1a1219;
+    text-color:         #e6d5e0;
+}
+
+element normal.active {
+    background-color:   #291c27;
+    text-color:         #e0247d;
+}
+
+element alternate.normal {
+    background-color:   #140d13;
+    text-color:         #e6d5e0;
+}
+
+element alternate.active {
+    background-color:   #291c27;
+    text-color:         #e0247d;
+}
+
+/* HOVER / SELECTED */
+
+element selected.normal {
+    background-color:   #e0247d;
+    text-color:         #ffffff;
+    border:             1px;
+    border-color:       #e0247d;
+}
+
+element selected.active {
+    background-color:   #e0247d;
+    text-color:         #ffffff;
+    border:             1px;
+    border-color:       #e0247d;
+}
+
+element-text {
+    background-color:   transparent;
+    text-color:         inherit;
+    vertical-align:     0.5;
+    horizontal-align:   0.0;
+}
+
+element-icon {
+    background-color:   transparent;
+    size:               24px;
+    padding:            0px 8px 0px 0px;
+}
+
+message {
+    background-color:   #100b10;
+    border:             1px 0px 0px;
+    border-color:       #5e1236;
+    padding:            8px;
+}
+
+textbox {
+    background-color:   #100b10;
+    text-color:         #e6d5e0;
+}

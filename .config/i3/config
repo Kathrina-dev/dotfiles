@@ -1,0 +1,196 @@
+font pango: Noto Sans Regular 14
+set $mod Mod4
+workspace_layout default
+
+##############################
+# Windows                    #
+##############################
+
+new_window pixel 1
+gaps inner 6
+gaps outer 3
+floating_modifier $mod
+
+# Focus window (Arrow keys)
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move window (Arrow keys)
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Layout controls
+bindsym $mod+h split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen toggle
+bindsym $mod+s layout stacking
+bindsym $mod+g layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+
+# Kill focused window
+bindsym $mod+q kill
+
+# resize window
+mode "resize" {
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+##########################################
+# Workspaces                             #
+##########################################
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+assign [class="Blueman-manager"] $ws1
+assign [class="zen-alpha|zen|Zen"] $ws2
+assign [class="Thunar"] $ws3
+assign [class="antigravity|Antigravity"] $ws4
+
+# Auto-Focus Rules
+for_window [class="Blueman-manager"] focus
+for_window [class="zen-alpha|zen|Zen"] focus
+for_window [class="Thunar"] focus
+for_window [class="antigravity|Antigravity"] focus
+
+# Floating Rules
+for_window [class="Yad" instance="yad"] floating enable
+for_window [class="Galculator" instance="galculator"] floating enable
+for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
+for_window [class="Xsane" instance="xsane"] floating enable
+for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
+for_window [class="qt5ct" instance="qt5ct"] floating enable
+for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
+for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
+for_window [class="Pamac-manager"] floating enable
+for_window [window_role="About"] floating enable
+
+
+# switch to workspace
+bindcode $mod+10    workspace  $ws1
+bindcode $mod+11    workspace  $ws2
+bindcode $mod+12    workspace  $ws3
+bindcode $mod+13    workspace  $ws4
+bindcode $mod+14    workspace  $ws5
+bindcode $mod+15    workspace  $ws6
+bindcode $mod+16    workspace  $ws7
+bindcode $mod+17    workspace  $ws8
+bindcode $mod+18    workspace  $ws9
+bindcode $mod+19    workspace  $ws10
+
+# move focused container to workspace
+bindcode $mod+Shift+10    move container to workspace  $ws1
+bindcode $mod+Shift+11    move container to workspace  $ws2
+bindcode $mod+Shift+12    move container to workspace  $ws3
+bindcode $mod+Shift+13    move container to workspace  $ws4
+bindcode $mod+Shift+14    move container to workspace  $ws5
+bindcode $mod+Shift+15    move container to workspace  $ws6
+bindcode $mod+Shift+16    move container to workspace  $ws7
+bindcode $mod+Shift+17    move container to workspace  $ws8
+bindcode $mod+Shift+18    move container to workspace  $ws9
+bindcode $mod+Shift+19    move container to workspace  $ws10
+
+######################################
+# Keybindings                        #
+######################################
+
+# Applications
+bindsym $mod+a exec --no-startup-id kitty
+bindsym $mod+w exec --no-startup-id zen-browser || zen
+bindsym $mod+c exec --no-startup-id ~/.local/bin/antigravity
+bindsym $mod+n exec --no-startup-id /usr/bin/thunar
+
+# Toggles
+bindsym $mod+z exec --no-startup-id pkill -x conky || conky -c ~/.config/conky/conky.conf
+bindsym $mod+x exec --no-startup-id ~/.config/polybar/toggle.sh
+
+# Rofi Menus
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/neon-pink.rasi
+bindsym $mod+t exec --no-startup-id rofi -show window -config ~/.config/rofi/neon-pink.rasi
+bindsym $mod+m exec --no-startup-id ~/.config/rofi/scripts/command-menu.sh
+bindsym $mod+b exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -theme ~/.config/rofi/neon-pink.rasi
+bindsym $mod+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
+bindsym F1 exec --no-startup-id ~/.config/i3/scripts/keyhint
+
+# Lock & Reload
+bindsym $mod+l exec --no-startup-id ~/.config/i3/scripts/blur-lock
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+## Multimedia Keys
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh volume_up
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh volume_down
+bindsym $mod+XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
+bindsym $mod+XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioMute exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh volume_mute
+bindsym XF86AudioMicMute exec amixer sset Capture toggle
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_up
+bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_down
+
+# Screenshots
+bindsym Print exec --no-startup-id scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
+bindsym $mod+Print exec --no-startup-id scrot -u ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
+bindsym $mod+Shift+Print exec --no-startup-id scrot -s ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
+
+#############################################
+# Autostart Services                        #
+#############################################
+
+exec_always $HOME/.config/i3/scripts/import-gsettings
+exec_always --no-startup-id feh --bg-fill /home/kathrina/Downloads/wallpaper.png
+exec_always --no-startup-id bash ~/.config/polybar/scripts/urgent-polybar.sh
+exec --no-startup-id greenclip daemon
+exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id ~/.screenlayout/monitor.sh
+exec --no-startup-id xset s 480 dpms 600 600 600
+exec --no-startup-id /usr/bin/dunst
+exec --no-startup-id blueman-applet
+exec --no-startup-id nm-applet
+exec --no-startup-id xss-lock -l ~/.config/i3/scripts/blur-lock
+
+
+######################################
+# Window Colors                      #
+######################################
+
+set $bg_black       #0f0f12
+set $card_black     #18181c
+set $neon_pink      #ff2a85
+set $hot_pink       #ff007f
+set $soft_pink      #ff75b5
+set $text_white     #ffffff
+set $text_grey      #a0a0a8
+set $dark_grey      #2a2a30
+set $urgent_red     #ff3366
+
+# Class                     border      bground     text        indicator   child_border
+client.focused              $neon_pink  $bg_black   $text_white $hot_pink    $neon_pink
+client.unfocused            $dark_grey  $bg_black   $text_grey  $dark_grey   $dark_grey
+client.focused_inactive     $dark_grey  $bg_black   $text_grey  $bg_black    $dark_grey
+client.urgent               $urgent_red $urgent_red $text_white $neon_pink   $urgent_red

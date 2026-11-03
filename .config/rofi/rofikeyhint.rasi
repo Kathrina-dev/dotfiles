@@ -1,0 +1,22 @@
+@import "neon-pink.rasi"
+
+window {
+    width:            65%;
+    location:         center;
+    padding:          16px;
+}
+
+mainbox {
+    children:         [ inputbar, listview ];
+    spacing:          10px;
+}
+
+listview {
+    lines:            8;
+    columns:          3;
+    spacing:          6px;
+}
+
+entry {
+    placeholder:      "Search keybindings...";
+}
