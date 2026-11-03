@@ -1,4 +1,4 @@
-# 🌸 Kathrina's Dotfiles & Cyberpunk Rice
+# Kathrina's Cyberpunk Rice
 
 <p align="center">
   <img src="https://img.shields.io/badge/OS-EndeavourOS-purple?style=for-the-badge&logo=endeavouros" alt="OS">
@@ -12,17 +12,17 @@ A curated collection of my personal Linux configuration files, custom rice, scri
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
-### 🪟 Tiled Workspace (Kitty, Fastfetch, YT Music Player, Pomodoro & CAVA)
+### Tiled Workspace (Kitty, Fastfetch, YT Music Player, Pomodoro & CAVA)
 ![Tiled Rice Preview](screenshot.png)
 
-### 🖥️ Desktop & Conky System Monitor
+### Desktop & Conky System Monitor
 ![Clean Desktop with Conky](screenshot-desktop.png)
 
 ---
 
-## 🎨 Rice Specifications & Components
+## Rice Specifications & Components
 
 | Component | Software | Details / Custom Features |
 | :--- | :--- | :--- |
@@ -44,7 +44,7 @@ A curated collection of my personal Linux configuration files, custom rice, scri
 
 ---
 
-## ⌨️ Custom Scripts & Tools
+## Custom Scripts & Tools
 
 - **`ytplay <query>`**: Shell function (`.zshrc` / `.bashrc`) to search YouTube, stream audio with `mpv`, and integrate with MPRIS.
 - **`pomo.py`**: Interactive CLI Pomodoro focus timer with visual rounds, animated ASCII clock, and completion sound/notifications.
@@ -56,7 +56,7 @@ A curated collection of my personal Linux configuration files, custom rice, scri
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 dotfiles/
@@ -101,7 +101,7 @@ dotfiles/
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ### 1. Synchronizing Tweaks to Git
 Whenever you adjust your i3 layout, polybar, or kitty configs:
