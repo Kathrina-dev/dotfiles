@@ -30,3 +30,4 @@ export PATH="/home/kathrina/.local/bin:$PATH"
 if [ -f "$HOME/.bashrc.local" ]; then
     source "$HOME/.bashrc.local"
 fi
+eval "$(mise activate bash)"

@@ -173,6 +173,7 @@ exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id xss-lock -l ~/.config/i3/scripts/blur-lock
+exec --no-startup-id ~/.local/bin/eyecare-timer start
 
 
 ######################################
